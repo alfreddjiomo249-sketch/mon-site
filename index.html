@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY PORTOFOLIO</title>
+  <link rel="stylesheet" href="./stlye.css">
+</head>
+<body>
+   <header>
+        <nav>
+            <div class="logo">MonPortfolio</div>
+            <ul>
+                <li><a href="#accueil">HOME</a></li>
+                <li><a href="#apropos">ABOUT-ME</a></li>
+                <li><a href="#projets">PROJECT</a></li>
+                <li><a href="#competences">COMPITENC</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+`
+    <section id="accueil">
+        <div class="hero-content">
+            <h1>Bonjour, je suis DJIOMO ALFRED</h1>
+            <p>Développeur Web Passionné</p>
+            <a href="#projets" class="btn">Voir mes projets</a>
+        </div>
+    </section>
+
+    <section id="apropos">
+        <h2>ABOUT-ME</h2>
+        <div class="apropos-content">
+            <div class="profile-img"><img src="image/19816.jpg" ></div>
+            <div>
+                <p style="margin-bottom: 1rem;">
+                    Passionné par le développement web et les nouvelles technologies, je crée des sites web modernes et responsives. 
+                    Je suis toujours à la recherche de nouveaux défis et d'opportunités pour apprendre et grandir.
+                </p>
+                <p>
+                    Mon objectif est de créer des expériences utilisateur exceptionnelles en combinant design créatif 
+                    et code propre. J'aime transformer des idées en réalité digitale.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets">
+        <h2>MY PROJECT</h2>
+        <div class="projets-grid">
+            <div class="projet-card">
+                <h3>Projet 1</h3>
+                <p>Site web responsive créé avec HTML, CSS et JavaScript. Interface moderne et intuitive pour une expérience utilisateur optimale.</p>
+            </div>
+            <div class="projet-card">
+                <h3>Projet 2</h3>
+                <p>Application web interactive utilisant des animations CSS avancées et une architecture responsive pour tous les appareils.</p>
+            </div>
+            <div class="projet-card">
+                <h3>Projet 3</h3>
+                <p>Portfolio créatif avec un design unique, mettant en valeur mes compétences en développement front-end.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences">
+        <h2>MY CONPITENC</h2>
+        <div class="competences-grid">
+            <div class="competence">
+                <div class="competence-icon">💻</div>
+                <h3>HTML/CSS</h3>
+                <p>Création de sites web structurés et stylés avec les dernières normes web</p>
+            </div>
+            <div class="competence">
+                <div class="competence-icon">⚡</div>
+                <h3>JavaScript</h3>
+                <p>Développement d'interactions dynamiques et d'applications web interactives</p>
+            </div>
+            <div class="competence">
+                <div class="competence-icon">📱</div>
+                <h3>Responsive Design</h3>
+                <p>Conception de sites adaptés à tous les types d'écrans et d'appareils</p>
+            </div>
+            <div class="competence">
+                <div class="competence-icon">🎨</div>
+                <h3>UI/UX Design</h3>
+                <p>Création d'interfaces utilisateur attrayantes et intuitives</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>CONTACT</h2>
+        <form class="contact-form" action="https://formspree.io/f/xzzyyaqv" method="post">
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit">Envoyer</button>
+            <div class="contact-left">
+              <h1 class="sub-title">Contact Me</h1>
+        <p>Email:alfreddjiomo@gmaile</p>
+        <p>whatsapp:659-85-21-16</p>
+      </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 [ALFRED]. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre message ! Je vous répondrai bientôt.');
+            this.reset();
+        });
+    </script>
+  
+</body>
+</html>
